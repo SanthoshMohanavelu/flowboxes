@@ -35,6 +35,13 @@ function mouseDragged() {
 
 }
 
+function mousePressed() {
+    boxes.push(new Box(mouseX, mouseY, random(10, 40), random(10, 40)))
+
+
+}
+
+
 function draw() {
   background(51)
 
