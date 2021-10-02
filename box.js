@@ -1,9 +1,10 @@
 function Box(x, y, w, h) {
     var options = {
         friction: 0.3,
-        restitution: 1
+        restitution: .5
     }
     this.body = Bodies.rectangle(x, y, w, h, options); 
+    this.color = color(random(0,255), random(0,255), random(0,255))
     this.w = w;
     this.h = h;
     World.add(world, this.body)
@@ -19,8 +20,7 @@ function Box(x, y, w, h) {
         rectMode(CENTER)
         strokeWeight(1)
         stroke(255)
-        if(fill(34, 56, 13 || fill(23, 76, 53)))
-        
+        fill(this.color)        
         rect(0, 0, this.w, this.h)
 
 

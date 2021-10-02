@@ -9,11 +9,15 @@ var Engine = Matter.Engine,
 var engine;
 var world;
 var boxes = [];
+var r, g, b
 
 var ground;
 
 function setup() {
   createCanvas(600,600)
+  r = random(255)
+  g = random(255)
+  b = random(255)
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
@@ -30,7 +34,7 @@ function setup() {
 }
 
 function mouseDragged() {
-    boxes.push(new Box(mouseX, mouseY, random(10, 40), random(10, 40)))
+    boxes.push(new Box(mouseX, mouseY, random(10, 90), random(10, 40)))
 
 
 }
